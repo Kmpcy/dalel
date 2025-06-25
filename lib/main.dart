@@ -10,8 +10,8 @@ class Dalel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-    
-      home: 
+    debugShowCheckedModeBanner: false,
+      home: Scaffold(),
     );
   }
 }
