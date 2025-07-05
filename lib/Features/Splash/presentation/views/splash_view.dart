@@ -1,4 +1,5 @@
 import 'package:dalel/core/fuctions/custom_navigate.dart';
+import 'package:dalel/core/fuctions/delayed_navigate.dart';
 import 'package:dalel/core/utlis/app_strings.dart';
 import 'package:dalel/core/utlis/app_text_styles.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +16,10 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     super.initState();
-     customNavigate(context: context, path: '/onBoarding');
+ delayedNavigate(context);
   }
+
+ 
 
   
   Widget build(BuildContext context) {

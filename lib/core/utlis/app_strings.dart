@@ -3,6 +3,7 @@ abstract class AppStrings {
   static const String appName = 'Dalel';
   static const String ok = 'OK';
   static const String cancel = 'Cancel';
+
   static const String yes = 'Yes';
   static const String no = 'No';
   static const String close = 'Close';
