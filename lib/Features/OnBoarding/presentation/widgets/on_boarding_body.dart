@@ -1,3 +1,4 @@
+import 'package:dalel/Features/OnBoarding/data/models/onBoarding_model.dart';
 import 'package:dalel/Features/OnBoarding/presentation/widgets/custom_page_indicator.dart';
 import 'package:dalel/core/utlis/app_assets.dart';
 import 'package:dalel/core/utlis/app_strings.dart';
@@ -15,7 +16,7 @@ class OnBoardingBody extends StatelessWidget {
       child: PageView.builder(
         controller: controller,
         physics: const BouncingScrollPhysics(),
-        itemCount: 3,
+        itemCount: onBoardingData.length,
         itemBuilder: (context, index) {
           return Column(
             children: [
@@ -24,7 +25,7 @@ class OnBoardingBody extends StatelessWidget {
                 width: 343,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage(Assets.assetsImagesOnBoarding1),
+                    image: AssetImage(onBoardingData[index].image),
                     fit: BoxFit.fill,
                   ),
                 ),
@@ -35,7 +36,7 @@ class OnBoardingBody extends StatelessWidget {
               Text(
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                "Explore The history with Dalel in a smart way",
+                onBoardingData[index].title,
                 style: AppStyles.poppins500style24,
                 textAlign: TextAlign.center,
               ),
@@ -44,7 +45,7 @@ class OnBoardingBody extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
 
                 maxLines: 2,
-                "Using our app’s history libraries you can find many historical periods ",
+                onBoardingData[index].subTiltle,
                 style: AppStyles.poppins300style16,
                 textAlign: TextAlign.center,
               ),
