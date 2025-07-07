@@ -10,20 +10,23 @@ class OnBoardingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          children: [
-            SizedBox(height: 40),
-            Align(
-              alignment: Alignment.topRight,
-              child: Text(
-                AppStrings.skip,
-                style: AppStyles.poppins300style16.copyWith(
-                  fontWeight: FontWeight.w400,
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            children: [
+              SizedBox(height: 40),
+              Align(
+                alignment: Alignment.topRight,
+                child: Text(
+                  AppStrings.skip,
+                  style: AppStyles.poppins300style16.copyWith(
+                    fontWeight: FontWeight.w400,
+                  ),
                 ),
               ),
-            ),
-            OnBoardingBody(),
-          ],
+              OnBoardingBody(),
+            ],
+          ),
         ),
       ),
     );
