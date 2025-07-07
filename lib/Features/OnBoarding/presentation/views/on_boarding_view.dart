@@ -1,5 +1,6 @@
 import 'package:dalel/Features/OnBoarding/presentation/widgets/on_boarding_body.dart';
 import 'package:dalel/core/utlis/app_strings.dart';
+import 'package:dalel/core/utlis/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingView extends StatelessWidget {
@@ -11,7 +12,16 @@ class OnBoardingView extends StatelessWidget {
       child: Scaffold(
         body: Column(
           children: [
-            Align(alignment: Alignment.topRight, child: Text(AppStrings.skip)),
+            SizedBox(height: 40),
+            Align(
+              alignment: Alignment.topRight,
+              child: Text(
+                AppStrings.skip,
+                style: AppStyles.poppins300style16.copyWith(
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ),
             OnBoardingBody(),
           ],
         ),
