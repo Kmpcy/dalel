@@ -2,6 +2,6 @@
 
 void delayedNavigate(context) {
     Future.delayed(const Duration(seconds: 2), () {
-     customNavigate(path:  '/onBoarding', context: context);
+     customReplaceNavigate(path:  '/onBoarding', context: context);
      });
   }
