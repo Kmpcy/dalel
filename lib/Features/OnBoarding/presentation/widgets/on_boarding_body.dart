@@ -7,13 +7,15 @@ import 'package:dalel/core/widgets/custom_btn.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingBody extends StatelessWidget {
-  OnBoardingBody({super.key, controller});
-  final PageController controller = PageController();
+  OnBoardingBody({super.key, required this.controller, this.onPageChanged});
+  PageController controller = PageController();
+  final Function(int)? onPageChanged;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 750,
+      height: 650,
       child: PageView.builder(
+        onPageChanged: onPageChanged,
         controller: controller,
         physics: const BouncingScrollPhysics(),
         itemCount: onBoardingData.length,
@@ -32,7 +34,7 @@ class OnBoardingBody extends StatelessWidget {
               ),
               SizedBox(height: 24),
               CustomPageIndicator(controller: controller),
-              SizedBox(height: 32),
+              SizedBox(height: 20),
               Text(
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
@@ -49,10 +51,6 @@ class OnBoardingBody extends StatelessWidget {
                 style: AppStyles.poppins300style16,
                 textAlign: TextAlign.center,
               ),
-              Spacer(flex: 2),
-
-              CustomBtn(onPressed: () {}, text: AppStrings.next),
-              SizedBox(height: 17),
             ],
           );
         },

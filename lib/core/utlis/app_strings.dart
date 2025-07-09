@@ -14,14 +14,14 @@ abstract class AppStrings {
   static const String search = 'Search';
 
   // Auth
-  static const String login = 'Login';
+  static const String login = 'Login Now';
   static const String logout = 'Logout';
   static const String register = 'Register';
   static const String signUp = 'Sign Up';
   static const String signIn = 'Sign In';
   static const String forgotPassword = 'Forgot Password?';
   static const String resetPassword = 'Reset Password';
-  static const String createAccount = 'Create an Account';
+  static const String createAccount = 'Create Account';
 
   // Form
   static const String email = 'Email';
@@ -71,7 +71,8 @@ abstract class AppStrings {
   static const String onboardingTitle1 = 'Discover Places';
   static const String onboardingDesc1 = 'Find the best places around you';
   static const String onboardingTitle2 = 'Get Directions';
-  static const String onboardingDesc2 = 'Navigate easily with real-time guidance';
+  static const String onboardingDesc2 =
+      'Navigate easily with real-time guidance';
 
   // Actions
   static const String add = 'Add';
