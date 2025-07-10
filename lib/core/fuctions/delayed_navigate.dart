@@ -1,7 +1,8 @@
  import 'package:dalel/core/fuctions/custom_navigate.dart';
 
-void delayedNavigate(context) {
+void delayedNavigate(String path,context) {
     Future.delayed(const Duration(seconds: 2), () {
-     customReplaceNavigate(path:  '/onBoarding', context: context);
+
+     customReplaceNavigate(path:  path, context: context);
      });
   }

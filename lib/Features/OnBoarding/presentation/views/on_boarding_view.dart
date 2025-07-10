@@ -1,6 +1,7 @@
 import 'package:dalel/Features/OnBoarding/data/models/onBoarding_model.dart';
 import 'package:dalel/Features/OnBoarding/presentation/widgets/custom_autn_btns.dart';
 import 'package:dalel/Features/OnBoarding/presentation/widgets/on_boarding_body.dart';
+import 'package:dalel/core/dataBase/cache/cache_helper.dart';
 import 'package:dalel/core/fuctions/custom_navigate.dart';
 import 'package:dalel/core/utlis/app_strings.dart';
 import 'package:dalel/core/utlis/app_text_styles.dart';
@@ -29,6 +30,10 @@ class _OnBoardingViewState extends State<OnBoardingView> {
               alignment: Alignment.topRight,
               child: TextButton(
                 onPressed: () {
+                  CacheHelper().saveData(
+                    key: "isOnBoardingVisited",
+                    value: true,
+                  );
                   customNavigate(context: context, path: '/signUp');
                 },
                 child: Text(
@@ -47,7 +52,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                 });
               },
             ),
-            Spacer(flex: 4),
+
             currentIndex == onBoardingData.length - 1
                 ? customAuthBtns()
                 : CustomBtn(
